@@ -1,0 +1,48 @@
+version: "2.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - info_acara
+  - info_bot
+  - info_harga
+  - info_nama
+  - info_total
+  - sapaan
+  - terima_kasih
+entities:
+  - nama
+  - total
+slots:
+  nama:
+    type: text
+  total:
+    type: any
+
+actions:
+  - action_total_htm
+
+responses:
+  utter_menyapa:
+    - text: Halo, dengan siapa disana?
+  utter_kenal:
+    - text: Halo, {nama} ada yang bisa saya bantu?
+  utter_def_acara:
+    - text: |
+        LOPOGRAF (Lomba Poster dan Fotografi) adaalah kegiatan perlombaan 
+        Fotografi dan Poster Tingkat Nasional yang diadakan oleh 
+        HIMATIKA FMIPA UNS.
+  utter_info_harga:
+    - text: |
+        HTM untuk pendaftaran setiap karya adalah 30K. 
+        Anda ingin mendaftarkan berapa karya?
+  utter_info_bot:
+    - text: |
+        Saya adalah LOPI ['~']. 
+        Saya akan menjawab kebingunganmu tentang acara LOPOGRAF.
+
+  utter_info_pendaftaran:
+    - text: Anda bisa mendaftar di bit.ly/pendaftaran-lopograf
+
+  utter_salam_akhir:
+    - text: Baik, ditunggu keikutsertaanya ya :)

@@ -1,0 +1,62 @@
+version: "2.0"
+
+nlu:
+  - intent: sapaan
+    examples: |
+      - pagi
+      - siang
+      - sore
+      - malam
+      - assalamualaikum
+      - permisi
+      - hai
+      - halo
+      - hello
+
+  - intent: info_nama
+    examples: |
+      - Saya [Joko](nama)
+      - [Prili](nama)
+      - Nama saya [Sukri](nama)
+      - [james](nama)
+      - [Ghazi](nama)
+      - saya [alan](nama)
+      - [Bambang](nama)
+      - [Budi](nama)
+
+  - intent: info_acara
+    examples: |
+      - Ini acara apa?
+      - acara apa?
+      - lopograf itu apa?
+      - lopograf
+      - LOPOGRAF
+      - lopograf acara apa?
+
+  - intent: info_harga
+    examples: |
+      - berapa harga daftar?
+      - harga per karya
+      - harga pendaftaran
+      - HTM pendaftaran
+      - berapa htm nya?
+
+  - intent: info_bot
+    examples: |
+      - siapa kamu?
+      - kamu siapa?
+
+  - intent: info_total
+    examples: |
+      - total HTM [3](total) karya
+      - berapa total htm untuk [12](total) karya
+      - berapa total [3](total) karya jika didaftarkan
+
+  - intent: terima_kasih
+    examples: |
+      - oke
+      - terima kasih
+      - siap
+      - ok
+      - thanks
+      - tks

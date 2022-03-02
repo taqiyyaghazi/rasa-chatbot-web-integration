@@ -1,0 +1,37 @@
+version: "2.0"
+
+stories:
+  - story: menyapa
+    steps:
+      - intent: sapaan
+      - action: utter_menyapa
+
+  - story: tanya_bantuan
+    steps:
+      - intent: info_nama
+        entities:
+          - nama
+      - action: utter_kenal
+
+  - story: def_acara
+    steps:
+      - intent: info_acara
+      - action: utter_def_acara
+
+  - story: tanya_harga
+    steps:
+      - intent: info_harga
+      - action: utter_info_harga
+
+  - story: tanya_bot
+    steps:
+      - intent: info_bot
+      - action: utter_info_bot
+
+  - story: tanya_total
+    steps:
+      - intent: info_total
+      - action: action_total_htm
+      - action: utter_info_pendaftaran
+      - intent: terima_kasih
+      - action: utter_salam_akhir
